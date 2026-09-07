@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队 7 - 合肥城市介绍</title>
+<style>
+    /* ===== 团队页面内嵌 CSS ===== */
+
+    /* 共用选择器：同时选中两个及以上 HTML 标签 */
+    h1, h2, h3 {
+        font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+        color: #1a3a5c;
+        letter-spacing: 0.5px;
+    }
+
+    /* 类选择器 */
+    .member-card {
+        background: #f4f8fb;
+        border: 1px solid #cfe0ec;
+        border-radius: 10px;
+        padding: 16px;
+        margin: 10px 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    /* 另一个类选择器，在多个元素上重复使用 */
+    .city-section {
+        margin: 28px 0;
+        padding: 18px;
+        background: #ffffff;
+        border-left: 5px solid #2b7a78;
+        border-radius: 6px;
+    }
+
+    /* 上下文选择器：嵌套在另一个标签内的标签样式 */
+    section.intro p {
+        font-size: 16px;
+        color: #2c3e50;
+        text-align: justify;
+    }
+
+    /* 图廊的上下文样式 */
+    div.gallery img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        border-radius: 8px;
+        margin: 8px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    /* <a> 标签的鼠标悬浮（hover）效果 */
+    a:hover {
+        color: #c0392b;
+        text-decoration: underline;
+        background-color: #fff3cd;
+    }
+
+    body {
+        font-family: "Microsoft YaHei", "PingFang SC", Georgia, serif;
+        background: linear-gradient(135deg, #e8f1f8 0%, #fdf6ec 100%);
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    header, footer {
+        text-align: center;
+        padding: 24px;
+        background: #1a3a5c;
+        color: #ffffff;
+    }
+
+    nav a {
+        margin: 0 10px;
+        color: #ffd966;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .gallery a {
+        display: inline-block;
+    }
+
+    .gallery a:hover img {
+        transform: scale(1.04);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    .ext-links {
+        list-style: none;
+        padding: 0;
+    }
+    .ext-links li {
+        margin: 8px 0;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+        h1 { font-size: 1.8em; }
+        main { padding: 12px; }
+        .gallery img { max-width: 100%; }
+        nav a { display: block; margin: 6px 0; }
+    }
+    @media (max-width: 480px) {
+        header, footer { padding: 16px 10px; }
+        .city-section { padding: 12px; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>团队 7 - 欢迎来到合肥</h1>
+    <nav>
+        <a href="#members">团队成员</a>
+        <a href="#location">地理位置</a>
+        <a href="#scenery">风景名胜</a>
+        <a href="#culture">文化</a>
+        <a href="#cuisine">美食</a>
+        <a href="personal.html">我的主页</a>
+        <a href="skills.html">我的技能</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- 团队成员板块 -->
+    <section id="members">
+        <h2>团队成员</h2>
+        <p style="font-style: italic; color: #555;">以下是本团队的成员，每张卡片链接到该成员的个人主页。</p>
+
+        <div class="member-card" style="border-left: 4px solid #2b7a78;">
+            <h3>你的姓名</h3>
+            <p>学号：<strong>SA12345678</strong>（占位，请替换）</p>
+            <a href="personal.html">访问我的主页 &raquo;</a>
+        </div>
+
+        <div class="member-card" style="border-left: 4px solid #c0392b;">
+            <h3>成员二</h3>
+            <p>学号：<strong>SA00000002</strong>（占位）</p>
+            <a href="personal2.html">访问成员二的主页 &raquo;</a>
+        </div>
+
+        <div class="member-card" style="border-left: 4px solid #e6a817;">
+            <h3>成员三</h3>
+            <p>学号：<strong>SA00000003</strong>（占位）</p>
+            <a href="personal3.html">访问成员三的主页 &raquo;</a>
+        </div>
+    </section>
+
+    <!-- 合肥介绍 -->
+    <h2 style="text-align:center; margin-top:40px;">走进合肥</h2>
+
+    <section id="location" class="city-section intro">
+        <h3>地理位置与人口</h3>
+        <p>合肥是安徽省省会，位于中国东部，地处长江与淮河之间，是长三角城市群副中心，距上海约 460 公里。作为安徽的政治、经济和文化中心，合肥在华东地区占据着重要的战略地位。</p>
+        <p>合肥常住人口约 985 万，现辖蜀山、包河、庐阳、瑶海四个区，以及长丰、肥东、肥西、庐江四个县，并代管县级巢湖市，总面积约 1.14 万平方公里，是华东地区面积最大的城市之一。</p>
+        <p style="background:#eaf4f4; padding:8px; border-radius:4px;">合肥也是<em>中国科学技术大学</em>所在地，这是中国最顶尖的研究型大学之一。</p>
+    </section>
+
+    <section id="scenery" class="city-section">
+        <h3>风景名胜</h3>
+        <p>合肥自然风光秀美、历史遗迹众多。著名景点包括中国五大淡水湖之一的巢湖、千年水乡古镇三河、纪念北宋名臣的包公园、逍遥津公园，以及现代化的天鹅湖商务区。</p>
+
+        <!-- 图廊：部分图片作为可点击的外部链接 -->
+        <div class="gallery">
+            <a href="https://en.wikipedia.org/wiki/Chao_Lake" target="_blank" title="了解巢湖">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/%E5%B7%A2%E6%B9%96%E9%A3%8E%E5%85%89001.jpg/960px-%E5%B7%A2%E6%B9%96%E9%A3%8E%E5%85%89001.jpg" alt="巢湖风光">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Sanhe_Town" target="_blank" title="了解三河古镇">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/%E4%B8%89%E6%B2%B3%E5%8F%A4%E9%95%87%E8%80%81%E8%A1%97.jpg/960px-%E4%B8%89%E6%B2%B3%E5%8F%A4%E9%95%87%E8%80%81%E8%A1%97.jpg" alt="三河古镇老街">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Bao_Zheng" target="_blank" title="了解包公园与包公">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Bao_He_Park_59558-Hefei_%2849222525582%29.jpg/960px-Bao_He_Park_59558-Hefei_%2849222525582%29.jpg" alt="合肥包公园">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Hefei" target="_blank" title="合肥天际线">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Skylines_of_Hefei_at_Tianehu.jpg/960px-Skylines_of_Hefei_at_Tianehu.jpg" alt="合肥天鹅湖天际线">
+            </a>
+        </div>
+        <p style="text-align:center; font-size:14px; color:#666;">点击上方任意图片可跳转维基百科查看更多信息。</p>
+    </section>
+
+    <section id="culture" class="city-section intro">
+        <h3>文化与历史</h3>
+        <p>合肥有 2200 多年的建城史。三国时期著名的逍遥津之战就发生于此。合肥也是北宋名臣包拯的故乡，包拯以清正廉洁、刚正不阿著称，是中国公正与廉明的文化象征。</p>
+        <p>合肥兼具徽文化底蕴与现代创新活力。作为科教名城，这里汇聚了中国科学技术大学、合肥物质科学研究院等科研机构，是国家重要的科技创新策源地，也是综合性国家科学中心。</p>
+        <p>地方戏曲、徽派建筑遗存、安徽名茶等共同构成了合肥独特的文化风貌。</p>
+    </section>
+
+    <section id="cuisine" class="city-section">
+        <h3>美食</h3>
+        <p>合肥菜是徽菜（安徽菜）的重要分支，以本地新鲜食材和煨、炖、烧等技法见长。代表菜包括：</p>
+        <ul style="line-height:1.8;">
+            <li><strong>庐州烤鸭</strong> - 皮脆肉嫩，合肥地方名菜。</li>
+            <li><strong>李鸿章大杂烩</strong> - 相传由合肥籍晚清名臣李鸿章得名，是一道用料丰盛的炖菜。</li>
+            <li><strong>小龙虾</strong> - 夏夜合肥街头最受欢迎的宵夜，宁国路一带尤为热闹。</li>
+            <li><strong>三河虾酱、三河米饺</strong> - 三河古镇特色风味。</li>
+        </ul>
+
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Anhui-style_stinky_tofu.jpg/960px-Anhui-style_stinky_tofu.jpg" alt="安徽风味臭豆腐">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Anhui_Fuyang_Taihe_Banmian.jpeg/960px-Anhui_Fuyang_Taihe_Banmian.jpeg" alt="安徽太和板面">
+        </div>
+    </section>
+
+    <!-- 外部链接板块 -->
+    <section class="city-section">
+        <h3>了解更多关于合肥</h3>
+        <ul class="ext-links">
+            <li><a href="https://zh.wikipedia.org/wiki/%E5%90%88%E8%82%A5" target="_blank">合肥 - 维基百科</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Hefei" target="_blank">Hefei - Wikipedia (English)</a></li>
+            <li><a href="https://www.ustc.edu.cn/" target="_blank">中国科学技术大学</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E5%8C%85%E6%8B%AF" target="_blank">包拯 - 中国公正廉明的象征</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E5%B7%A2%E6%B9%96" target="_blank">巢湖 - 中国五大淡水湖之一</a></li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p style="margin:0;">&copy; 2026 团队 7 - Web 开发作业 | 合肥城市介绍</p>
+    <p style="margin:6px 0 0;"><a href="personal.html" style="color:#ffd966;">返回我的主页</a></p>
+</footer>
+
+</body>
+</html>

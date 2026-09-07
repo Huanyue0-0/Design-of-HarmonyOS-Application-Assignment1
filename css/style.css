@@ -1,0 +1,131 @@
+/* =========================================================
+   External stylesheet for the personal homepage (personal.html)
+   ========================================================= */
+
+/* Style formatting all <p> (paragraph) tags */
+p {
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #2c3e50;
+    margin-bottom: 14px;
+}
+
+/* Generic class definition - reused across multiple page elements */
+.card {
+    background: #f8fbff;
+    border: 1px solid #d6e4ef;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 16px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+/* Another generic class reused across the page */
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 4px;
+    background: #e1f0e7;
+    color: #1e6b3a;
+    border-radius: 14px;
+    font-size: 13px;
+}
+
+/* Tag-specific class: a class that is itself tied to a tag name,
+   e.g. styling headings within the .header block */
+.header h1 {
+    color: #ffffff;
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+    font-size: 2.2em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.header h2 {
+    color: #ffd966;
+    font-weight: 400;
+    margin: 6px 0 0;
+}
+
+/* Class for <a> tags with a hover effect */
+.link {
+    display: inline-block;
+    margin: 6px 12px 6px 0;
+    padding: 6px 14px;
+    color: #1a3a5c;
+    text-decoration: none;
+    border: 2px solid #1a3a5c;
+    border-radius: 20px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.link:hover {
+    background: #1a3a5c;
+    color: #ffd966;
+    border-color: #1a3a5c;
+    transform: translateY(-2px);
+}
+
+/* General layout */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #eef5fb 0%, #fff8ec 100%);
+}
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #1a3a5c;
+    color: #ffffff;
+}
+
+.header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #ffd966;
+    object-fit: cover;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a3a5c;
+    color: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header img { width: 120px; height: 120px; }
+    .header h1 { font-size: 1.6em; }
+    main { padding: 14px; }
+    .gallery img { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .header { padding: 24px 12px; }
+    .link { display: block; text-align: center; }
+}

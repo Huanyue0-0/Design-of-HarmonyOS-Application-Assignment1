@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的主页 - 你的姓名</title>
+<!-- 外部 CSS 样式表（必需） -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- 页面内嵌 <style> 标签 -->
+<style>
+    /* ID 选择器，用于设置字体样式 */
+    #bio-text {
+        font-family: "Microsoft YaHei", "PingFang SC", "Georgia", serif;
+        font-size: 17px;
+        color: #34495e;
+    }
+
+    /* 标题文本样式 */
+    h2 {
+        color: #1a3a5c;
+        border-bottom: 2px solid #2b7a78;
+        padding-bottom: 6px;
+    }
+
+    h3 {
+        color: #2b7a78;
+    }
+
+    /* 上下文选择器：嵌套在另一个标签内的标签样式 */
+    div.content p {
+        line-height: 1.7;
+        text-align: justify;
+    }
+
+    div.plan ol {
+        background: #f4f8fb;
+        padding: 18px 18px 18px 36px;
+        border-radius: 8px;
+        border-left: 4px solid #2b7a78;
+    }
+
+    /* 通用徽章类，在页面多个元素上重复使用 */
+    .badge {
+        display: inline-block;
+        padding: 3px 10px;
+        background: #fff3cd;
+        color: #7a5c00;
+        border-radius: 10px;
+        font-size: 13px;
+        margin: 2px;
+    }
+</style>
+</head>
+<body>
+
+<header class="header">
+    <!-- 本人照片占位：内联 SVG 剪影，提交前请替换为本人真实照片 -->
+    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><rect width='320' height='320' fill='%231a3a5c'/><circle cx='160' cy='125' r='55' fill='%23ffd966'/><path d='M70 285 Q160 195 250 285 Z' fill='%23ffd966'/><circle cx='160' cy='125' r='55' fill='none' stroke='%23ffffff' stroke-width='0'/></svg>" alt="本人照片占位">
+    <h1>你的姓名</h1>
+    <h2>学号：SA12345678（占位，请替换）</h2>
+    <p style="color:#cfd8e3; margin-top:8px;">中国科学技术大学 软件学院 硕士研究生</p>
+</header>
+
+<main>
+
+    <!-- 超链接板块：电子邮箱 + 另外两个页面 -->
+    <section class="card" style="text-align:center;">
+        <a class="link" href="mailto:yourname@example.com">&#9993; 给我发邮件</a>
+        <a class="link" href="index.html">&#127968; 团队页面（合肥）</a>
+        <a class="link" href="skills.html">&#128736; 职业技能页面</a>
+    </section>
+
+    <!-- 个人介绍 -->
+    <section class="content">
+        <h2>关于我</h2>
+        <p id="bio-text">你好！我是中国科学技术大学软件学院的硕士研究生，目前在苏州校区学习。我的研究方向是软件工程、系统设计与全栈开发，喜欢把想法变成可靠的软件，也喜欢研究事物底层的运行原理。</p>
+        <p id="bio-text">我的学术兴趣包括操作系统、分布式系统以及现代 Web 技术。课余时间我喜欢阅读技术博客、参与小型开源项目，也喜欢探索新的编程语言。</p>
+    </section>
+
+    <!-- 爱好与兴趣（含图片） -->
+    <section class="content">
+        <h2>爱好与兴趣</h2>
+        <p>课余之外，我有几个让我保持平衡和创造力的爱好：</p>
+        <ul>
+            <li><strong>编程与个人项目</strong> - 开发小工具和 Web 应用。</li>
+            <li><strong>阅读</strong> - 科幻小说和技术书籍。</li>
+            <li><strong>摄影</strong> - 记录城市风景与自然。</li>
+            <li><strong>篮球与跑步</strong> - 保持活力与精力。</li>
+        </ul>
+
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Programming_code.jpg/960px-Programming_code.jpg" alt="我的编程工作台">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Man_sitting_on_a_bench_reading_a_book%2C_Pal%C3%A1cio_das_Galveias%2C_Lisbon%2C_Portugal_julesvernex2.jpg/960px-Man_sitting_on_a_bench_reading_a_book%2C_Pal%C3%A1cio_das_Galveias%2C_Lisbon%2C_Portugal_julesvernex2.jpg" alt="阅读时光">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Street_Basketball.JPG/960px-Street_Basketball.JPG" alt="街头篮球">
+        </div>
+    </section>
+
+    <!-- 职业技能发展规划 -->
+    <section class="content plan">
+        <h2>职业技能发展规划</h2>
+        <p>我的目标是成为一名全面的全栈软件工程师。以下是我的分阶段发展规划：</p>
+        <ol>
+            <li><strong>第一阶段 - 打牢基础（研一）：</strong>巩固计算机基础（数据结构、算法、操作系统、计算机网络），掌握一到两门核心语言（Python、Java），熟悉 Linux 与 Git。</li>
+            <li><strong>第二阶段 - 全栈技能（研二）：</strong>学习前端（HTML/CSS/JavaScript、React）与后端（Node.js/Express 或 Spring Boot）、数据库（SQL 与 NoSQL），以及基本 DevOps（Docker、CI/CD）。完成 2-3 个可展示的项目。</li>
+            <li><strong>第三阶段 - 实习实践（研三）：</strong>进入公司实习，获得真实工程经验，学习团队协作、代码评审、大规模系统设计，并参与开源贡献。</li>
+            <li><strong>第四阶段 - 专项深耕：</strong>在选定方向（如分布式系统或 AI 工程）深入，成长为可承担全职工作的中级工程师。</li>
+        </ol>
+
+        <p style="text-align:center;">
+            <span class="badge">目标岗位：全栈工程师</span>
+            <span class="badge">方向：Web + 系统</span>
+            <span class="badge">持续学习中</span>
+        </p>
+
+        <p style="text-align:center; margin-top:18px;">
+            <a class="link" href="skills.html">查看我详细的技能清单 &raquo;</a>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p style="color:#ffffff; margin:0;">&copy; 2026 你的姓名 - 中国科学技术大学软件学院</p>
+    <p style="margin:6px 0 0;"><a class="link" href="index.html" style="background:#ffd966; color:#1a3a5c; border-color:#ffd966;">返回团队页面</a></p>
+</footer>
+
+</body>
+</html>
