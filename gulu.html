@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的主页 - 郑金亮</title>
+<!-- 外部 CSS 样式表（与团队成员共用同一份） -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- 页面内嵌 <style> 标签 -->
+<style>
+    /* ID 选择器，用于设置简介文字字体（两个 id 共用同一条声明） */
+    #about-text-1, #about-text-2 {
+        font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+        font-size: 17px;
+        color: #34495e;
+    }
+
+    /* 标题文本样式 */
+    h2 {
+        color: #1a3a5c;
+        border-bottom: 2px dashed #2b7a78;
+        padding-bottom: 6px;
+    }
+
+    h3 {
+        color: #2b7a78;
+    }
+
+    /* 上下文选择器：嵌套在 section 内的段落样式 */
+    div.content p {
+        line-height: 1.75;
+        text-align: justify;
+    }
+
+    /* 职业规划列表的卡片背景 */
+    div.plan ol {
+        background: #eef9f4;
+        padding: 18px 18px 18px 36px;
+        border-radius: 8px;
+        border-left: 4px solid #2b7a78;
+    }
+
+    /* 图廊里的图片说明块 */
+    .gallery figure {
+        margin: 0 0 8px;
+    }
+
+    figure figcaption {
+        font-size: 13px;
+        color: #666;
+        margin-top: 6px;
+        text-align: center;
+    }
+
+    /* 图廊图片单独调尺寸：科比缩小、张雪峰放大 */
+    .gallery img.kobe {
+        max-width: 210px;
+    }
+    .gallery img.zhang {
+        max-width: 400px;
+    }
+    /* 手机端让放大的图不溢出屏幕 */
+    @media (max-width: 768px) {
+        .gallery img.zhang { max-width: 100%; }
+    }
+
+    /* 通用徽章类 */
+    .badge {
+        display: inline-block;
+        padding: 3px 10px;
+        background: #fff3cd;
+        color: #7a5c00;
+        border-radius: 10px;
+        font-size: 13px;
+        margin: 2px;
+    }
+</style>
+</head>
+<body>
+
+<header class="header">
+    <!-- 本人照片 -->
+    <img src="http://n.sinaimg.cn/sinakd20201129s/120/w1080h1440/20201129/5586-kentcvy4701106.jpg" alt="郑金亮本人照片">
+    <h1>郑金亮</h1>
+    <h2>学号：SA26225479</h2>
+    <p style="color:#cfd8e3; margin-top:8px;">中国科学技术大学 软件学院 硕士研究生</p>
+</header>
+
+<main>
+
+    <!-- 超链接板块：电子邮箱 + 另外两个页面 -->
+    <section class="card" style="text-align:center;">
+        <a class="link" href="mailto:1302037752@qq.com">&#9993; 给我发邮件</a>
+        <a class="link" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1302037752@qq.com" target="_blank">&#128231; QQ邮箱网页版写信</a>
+        <a class="link" href="index.html">&#127968; 团队页面（合肥）</a>
+        <a class="link" href="gulu_skills.html">&#128736; 职业技能页面</a>
+    </section>
+
+    <!-- 个人介绍 -->
+    <section class="content">
+        <h2>关于我</h2>
+        <p id="about-text-1">你好！我是中国科学技术大学软件学院的硕士研究生郑金亮，目前主攻大数据处理与后端系统方向。我喜欢研究数据如何被高效地存储、流转与利用，也热衷于把复杂问题拆解成清晰可靠的工程方案。</p>
+        <p id="about-text-2">我的研究兴趣集中在数据库内核、分布式计算与云原生技术。学习之外，我保持每周规律运动，球场上的配合与跑道上的坚持，让我更懂得团队协作和长期主义的意义。</p>
+    </section>
+
+    <!-- 爱好与兴趣（含图片） -->
+    <section class="content">
+        <h2>爱好与兴趣</h2>
+        <p>繁忙的课业之外，运动是我最好的调节剂，下面两项是我的最爱：</p>
+        <ul>
+            <li><strong>打篮球</strong> - 场上司职后卫，享受运球突破与队友配合的节奏。</li>
+            <li><strong>跑步</strong> - 坚持晨跑与周末长跑，享受放空思绪、挑战配速的乐趣。</li>
+        </ul>
+
+        <div class="gallery">
+            <figure>
+                <img src="https://p8.itc.cn/images01/20220814/b78976dacbf64393af755dbd9a9c1d58.jpeg" alt="蔡徐坤">
+            </figure>
+            <figure>
+                <img class="kobe" src="https://c-ssl.dtstatic.com/uploads/blog/202308/14/aLSLvEzPt0WP2Nx.thumb.400_0.jpg" alt="科比·布莱恩特">
+            </figure>
+            <figure>
+                <img class="zhang" src="https://i0.hdslb.com/bfs/archive/793bc2b53c3436f6d63b54a0e129cdd283bd7268.jpg@.webp" alt="张雪峰">
+            </figure>
+        </div>
+    </section>
+
+    <!-- 职业技能发展规划 -->
+    <section class="content plan">
+        <h2>职业发展目标与规划</h2>
+        <p>我的长期目标是成长为一名资深后端 / 大数据工程师。为此我制定了如下分阶段计划：</p>
+        <ol>
+            <li><strong>第一阶段 - 打牢基础（研一）：</strong>吃透数据结构、算法与操作系统原理，熟练掌握 Python 与 Java，系统学习数据库与计算机网络，坚持在 LeetCode 上刷题保持手感。</li>
+            <li><strong>第二阶段 - 工程实战（研二）：</strong>进入企业实习积累真实经验，掌握 Spring Boot、消息队列与分布式缓存的落地用法，关注性能优化与代码评审，并尝试参与开源项目。</li>
+            <li><strong>第三阶段 - 方向深耕（研三）：</strong>在分布式系统或大数据平台方向持续深入，形成体系化的架构能力，成长为可以独当一面的工程师。</li>
+        </ol>
+
+        <p style="text-align:center;">
+            <span class="badge">目标岗位：后端 / 大数据工程师</span>
+            <span class="badge">方向：分布式 · 云原生</span>
+            <span class="badge">坚持运动中</span>
+        </p>
+
+        <p style="text-align:center; margin-top:18px;">
+            <a class="link" href="gulu_skills.html">查看我详细的技能清单 &raquo;</a>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p style="color:#ffffff; margin:0;">&copy; 2026 郑金亮 - 中国科学技术大学软件学院</p>
+    <p style="margin:6px 0 0;"><a class="link" href="index.html" style="background:#ffd966; color:#1a3a5c; border-color:#ffd966;">返回团队页面</a></p>
+</footer>
+
+</body>
+</html>
