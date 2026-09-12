@@ -73,6 +73,12 @@
         color: #ffffff;
     }
 
+    /* 标签限定类：设置 header 内部标题的样式，
+       避免 h1,h2,h3 规则里的深蓝色与深蓝背景同色而看不见 */
+    header h1 {
+        color: #ffd966;
+    }
+
     nav a {
         margin: 0 10px;
         color: #ffd966;
@@ -126,7 +132,7 @@
 <body>
 
 <header>
-    <h1>团队 7 - 欢迎来到合肥</h1>
+    <h1>团队 1 - 欢迎来到合肥</h1>
     <nav>
         <a href="#members">团队成员</a>
         <a href="#location">地理位置</a>
@@ -150,15 +156,27 @@
         </div>
 
         <div class="member-card" style="border-left: 4px solid #c0392b;">
-            <h3>成员二</h3>
-            <p>学号：<strong>SA00000002</strong>（占位）</p>
-            <a href="personal2.html">访问成员二的主页 &raquo;</a>
+            <h3>郑金亮</h3>
+            <p>学号：<strong>SA26225479</strong></p>
+            <a href="gulu.html">访问郑金亮的主页 &raquo;</a>
         </div>
 
         <div class="member-card" style="border-left: 4px solid #e6a817;">
             <h3>成员三</h3>
             <p>学号：<strong>SA00000003</strong>（占位）</p>
             <a href="personal3.html">访问成员三的主页 &raquo;</a>
+        </div>
+
+        <div class="member-card" style="border-left: 4px solid #8e44ad;">
+            <h3>成员四</h3>
+            <p>学号：<strong>SA00000004</strong>（占位）</p>
+            <a href="personal4.html">访问成员四的主页 &raquo;</a>
+        </div>
+
+        <div class="member-card" style="border-left: 4px solid #16a085;">
+            <h3>成员五</h3>
+            <p>学号：<strong>SA00000005</strong>（占位）</p>
+            <a href="personal5.html">访问成员五的主页 &raquo;</a>
         </div>
     </section>
 
@@ -233,7 +251,6 @@
 
 <footer>
     <p style="margin:0;">&copy; 2026 团队 1 - Web 开发作业 | 合肥城市介绍</p>
-    <p style="margin:6px 0 0;"><a href="personal.html" style="color:#ffd966;">返回我的主页</a></p>
 </footer>
 
 </body>
