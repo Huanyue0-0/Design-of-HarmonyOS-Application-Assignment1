@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>詹茜茜 | 职业技能</title>
+    <!-- 外部样式表，和首页共用 -->
+    <link rel="stylesheet" href="zxxstyle.css">
+    <style>
+        /* ID选择器，作业考点 */
+        #skill-title-desc {
+            font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
+            letter-spacing: 0.6px;
+            text-align: justify;
+        }
+
+        /* 考点：标题文本全局样式 和首页完全一致 */
+        h2 {
+            color: #7a68b8;
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid #8c78c4;
+        }
+
+        /* 考点：上下文选择器 和首页完全一致 */
+        .main-content p {
+            line-height: 2;
+            color: #555;
+            opacity: 0.95;
+        }
+
+        /* 页面背景和个人主页统一浅紫色 */
+        body{
+            background-color: #faf9fd;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 大卡片comm-card样式 和首页完全一致，带hover上浮阴影 */
+        .comm-card{
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 24px;
+            transition: 0.3s ease;
+            border: 1px solid #f0edf7;
+            overflow: visible !important; /* 保证内部小卡片上浮不被裁剪 */
+        }
+        .comm-card:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(120, 100, 180, 0.1);
+        }
+
+        /* ====== 内部小技能卡片hover动画 ====== */
+        .skill-card{
+            background:#f4f0fc; 
+            border-radius:18px; 
+            padding:24px; 
+            transition:0.3s ease; 
+            border:1px solid #e9e2f7;
+            transform: translateY(0);
+            box-shadow: none;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .skill-card:hover{
+            transform: translateY(-6px);
+            box-shadow: 0 10px 24px rgba(122, 104, 184, 0.15);
+        }
+        .skill-card-blue{
+            background:#edf4fc; 
+            border:1px solid #ddebf9;
+        }
+        .skill-card-blue:hover{
+            box-shadow: 0 10px 24px rgba(75, 124, 173, 0.15);
+        }
+        .skill-card-green{
+            background:#edf9f4; 
+            border:1px solid #daf1e8;
+        }
+        .skill-card-green:hover{
+            box-shadow: 0 10px 24px rgba(60, 148, 119, 0.15);
+        }
+        .skill-card-orange{
+            background:#fcf1eb; 
+            border:1px solid #f9e4d9;
+        }
+        .skill-card-orange:hover{
+            box-shadow: 0 10px 24px rgba(185, 111, 73, 0.15);
+        }
+
+        /* 按钮样式 和首页完全一致 */
+        .btn-wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .page-card-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 18px 12px;
+            border:1px solid rgba(140, 120, 196, 0.2);
+            border-radius:16px;
+            text-decoration:none;
+            color:#6b58a8;
+            font-weight:500;
+            transition:0.3s ease;
+        }
+        /* 左侧按钮：浅紫 */
+        .btn-left {
+            background-color: rgba(234, 229, 247, 0.75);
+        }
+        /* 右侧按钮：浅蓝 */
+        .btn-right {
+            background-color: rgba(227, 237, 248, 0.75);
+        }
+        .page-card-btn:hover{
+            transform: translateY(-4px);
+            box-shadow:0 6px 20px rgba(120,100,180,0.12);
+        }
+        .btn-left:hover {
+            background-color: rgba(217, 206, 238, 0.85);
+        }
+        .btn-right:hover {
+            background-color: rgba(204, 222, 242, 0.85);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏，和首页保持一致 -->
+    <div class="top-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Personal Portfolio</div>
+            <div class="nav-menu">
+                <a href="pzxx.html" class="nav-link">个人主页</a>
+                <a href="team.html" class="nav-link">团队首页</a>
+                <a href="mailto:2693386955@qq.com" class="nav-link">联系我</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header-wrap" style="text-align:center;margin-top:40px;">
+        <h1 class="page-title" style="font-size:34px; color:#5a4896;">职业技能 Skills</h1>
+        <p style="color:#999;margin-top:10px;">詹茜茜 ｜ 学号：SA26225426</p>
+    </header>
+
+    <div class="main-content">
+        <!-- 开篇介绍卡片 -->
+        <div class="comm-card">
+            <p id="skill-title-desc" style="font-size:16px;">
+                结合研究生阶段学习规划，持续夯实编程基础、工程实践能力与综合素养。下面分为硬技能与软技能两大板块，展示当前掌握的技术能力与通用能力。
+            </p>
+        </div>
+
+        <!-- ========== 硬技能 独立大卡片 ========== -->
+        <div class="comm-card">
+            <h2>硬技能 Hard Skills</h2>
+            <p style="margin-bottom:20px;">编程语言、开发工具、专业技术能力，支撑项目开发与科研实践</p>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                <!-- 卡片1 编程语言 -->
+                <div class="skill-card">
+                    <h3 style="margin:0 0 12px; color:#6b58a8; font-size:19px;">编程语言</h3>
+                    <p style="margin:0; color:#444;">熟练掌握 Python，具备数据处理、算法实现与 AI 应用开发能力，能够基于大模型 API 与 Agent 框架构建智能应用；掌握 C / C++，理解底层内存与性能优化，关注 AI Infra 与系统级开发；熟悉 JavaScript / TypeScript，支撑现代前端与全栈开发；同时了解 Rust 等新兴系统语言，持续跟进 AI 时代下的编程语言演进。</p>
+                </div>
+
+                <!-- 卡片2 全栈开发 -->
+                <div class="skill-card skill-card-blue">
+                    <h3 style="margin:0 0 12px; color:#4b7cad; font-size:19px;">全栈开发</h3>
+                    <p style="margin:0; color:#444;">基于现代前端工程体系开发，熟练运用 Vue、React + TypeScript 搭建大型组件化项目，熟悉构建工具与前端性能优化。拥有前后端联合开发经验，可封装大模型服务接口，实现AI能力在Web、跨端应用的嵌入，落地智能交互场景。</p>
+                </div>
+
+                <!-- 卡片3 数据与AI相关 -->
+                <div class="skill-card skill-card-green">
+                    <h3 style="margin:0 0 12px; color:#3c9477; font-size:19px;">数据处理 & AI基础</h3>
+                    <p style="margin:0; color:#444;">使用Python进行数据处理、数据可视化；了解大模型、AI Agent、AI Infra、具身智能基础概念，持续跟进前沿技术。</p>
+                </div>
+
+                <!-- 卡片4 工程工具 -->
+                <div class="skill-card skill-card-orange">
+                    <h3 style="margin:0 0 12px; color:#b96f49; font-size:19px;">工程工具</h3>
+                    <p style="margin:0; color:#444;">Git/GitHub版本管理，代码规范管理；熟悉Linux基础命令，能够完成代码部署、项目文件管理等基础工程操作。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 软技能 独立大卡片 ========== -->
+        <div class="comm-card">
+            <h2>软技能 Soft Skills</h2>
+            <p style="margin-bottom:20px;">依托软件工程思想与系统建模思维，规范推进科研与工程项目，具备标准化、结构化的工程实践能力</p>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                <!-- 软技能卡片1 -->
+                <div class="skill-card">
+                    <h3 style="margin:0 0 12px; color:#6b58a8; font-size:19px;">软件工程思维</h3>
+                    <p style="margin:0; color:#444;">具备标准化软件工程开发思想，理解需求分析、模块化设计、代码规范、版本迭代与项目交付流程，摒弃碎片化开发习惯，能够以工程化标准落地 AI 应用与跨端项目开发。</p>
+                </div>
+                <!-- 软技能卡片2 -->
+                <div class="skill-card skill-card-blue">
+                    <h3 style="margin:0 0 12px; color:#4b7cad; font-size:19px;">系统建模与分析能力</h3>
+                    <p style="margin:0; color:#444;">掌握基础系统建模思想，能够对项目架构、业务逻辑与AI交互流程进行结构化拆解、抽象建模与逻辑分析，梳理模块关系、优化系统结构，提升项目稳定性与可维护性。</p>
+                </div>
+                <!-- 软技能卡片3 -->
+                <div class="skill-card skill-card-green">
+                    <h3 style="margin:0 0 12px; color:#3c9477; font-size:19px;">团队工程协作</h3>
+                    <p style="margin:0; color:#444;">熟悉团队协同开发模式，遵从软件工程协作规范，能够配合团队完成需求对接、模块开发、代码评审与联调测试，适配大型科研项目与工业级工程迭代场景。</p>
+                </div>
+                <!-- 软技能卡片4 -->
+                <div class="skill-card skill-card-orange">
+                    <h3 style="margin:0 0 12px; color:#b96f49; font-size:19px;">任务规划管理</h3>
+                    <p style="margin:0; color:#444;">自律性强，可以拆分中长期目标，有序推进科研、项目与学习任务，把控项目进度，按时交付成果。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 联系方式与页面跳转模块 -->
+	   <div class="comm-card">
+            <h2>联系方式 &amp; 页面导航</h2>
+            <p>电子邮箱：<a href="mailto:2693386955@qq.com" class="nav-link">2693386955@qq.com</a></p>
+            <div class="btn-wrap">
+                <a href="pzxx.html" class="page-card-btn btn-left">
+                    <span>←</span>
+                    <div>返回个人主页</div>
+                </a>
+                <a href="index.html" class="page-card-btn btn-right">
+                    <div>团队首页</div>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>© 2026 詹茜茜 | 个人版权所有</p>
+        <p style="margin-top:8px;">基于 HTML/CSS 响应式开发 </p>
+    </div>
+</body>
+</html>

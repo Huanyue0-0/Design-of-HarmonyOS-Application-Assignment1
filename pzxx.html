@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>詹茜茜 | 个人主页</title>
+    <!-- 外部CSS样式表（作业硬性考点） -->
+    <link rel="stylesheet" href="zxxstyle.css">
+    <!-- 内嵌CSS样式（所有内嵌考点全覆盖） -->
+    <style>
+        /* 考点：ID选择器 - 专属字体样式设置 */
+        #profile-desc {
+            font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
+            letter-spacing: 0.5px;
+            text-align: justify;
+        }
+
+        /* 考点：标题文本全局样式 */
+        h2 {
+            color: #7a68b8;
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid #8c78c4;
+        }
+
+        /* 考点：上下文选择器 - 仅内容容器内部p标签生效 */
+        .main-content p {
+            line-height: 2;
+            color: #555;
+            opacity: 0.95;
+        }
+
+        /* ========== 修复：补充comm-card卡片基础样式+悬浮动画 ========== */
+        .comm-card{
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 24px;
+            transition: 0.3s ease;
+            border: 1px solid #f0edf7;
+            overflow: visible !important; /* 彻底解决阴影/上浮被裁剪 */
+        }
+        .comm-card:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(120, 100, 180, 0.1);
+        }
+
+        /* 商用首页横幅样式 */
+        .banner-box {
+            width: 100%;
+            height: 380px;
+            background: linear-gradient(120deg, rgba(140, 120, 196, 0.2), rgba(114, 168, 216, 0.2));
+            border-radius: 24px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            backdrop-filter: blur(6px);
+        }
+        .avatar-big {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.8);
+            box-shadow: 0 8px 24px rgba(120,100,180,0.15);
+            margin-bottom: 16px;
+        }
+        .banner-text {
+            font-size: 28px;
+            color: #6b58a8;
+            font-weight: 600;
+        }
+        .banner-sub {
+            color: #888;
+            margin-top: 8px;
+        }
+        .btn-wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .page-card-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 18px 12px;
+            border:1px solid rgba(140, 120, 196, 0.2);
+            border-radius:16px;
+            text-decoration:none;
+            color:#6b58a8;
+            font-weight:500;
+            transition:0.3s ease;
+        }
+        /* 左侧按钮：浅紫 */
+        .btn-left {
+            background-color: rgba(234, 229, 247, 0.75);
+        }
+        /* 右侧按钮：浅蓝 */
+        .btn-right {
+            background-color: rgba(227, 237, 248, 0.75);
+        }
+        .page-card-btn:hover{
+            transform: translateY(-4px);
+            box-shadow:0 6px 20px rgba(120,100,180,0.12);
+        }
+        .btn-left:hover {
+            background-color: rgba(217, 206, 238, 0.85);
+        }
+        .btn-right:hover {
+            background-color: rgba(204, 222, 242, 0.85);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏外层撑满浏览器，内层nav-container和页面模块对齐 -->
+    <div class="top-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Personal Portfolio</div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">团队首页</a>
+                <a href="zxxskill.html" class="nav-link">职业技能</a>
+                <a href="mailto:2693386955@qq.com" class="nav-link">联系我</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部标题区域 -->
+    <header class="header-wrap" style="text-align:center;margin-top:40px;">
+        <h1 class="page-title">个人主页</h1>
+        <p style="color:#999;margin-top:10px;">詹茜茜 ｜ 学号：SA26225426</p>
+    </header>
+
+    <div class="main-content">
+        <!-- 1. 首页横幅模块（产品官网首屏质感） -->
+        <div class="banner-box">
+            <img src="images/zxximage.jpg" alt="个人形象照" class="avatar-big">
+            <div class="banner-text">詹茜茜 | 网络与信息安全2班</div>
+            <div class="banner-sub">中国科学技术大学 · 软件工程</div>
+        </div>
+
+        <!-- 2. 个人简介模块 -->
+        <div class="comm-card">
+            <h2>个人简介 Profile</h2>
+            <p id="profile-desc">詹茜茜，本科毕业于杭州电子科技大学计算机科学与技术专业，具备扎实的计算机专业基础知识，拥有完善的应用开发能力，包括但不限于鸿蒙APP应用开发相关技术。性格自律踏实、积极上进，拥有较强的自主学习能力与独立问题排查能力。在项目实践中注重规范开发与工程思维，善于团队协作、沟通配合，能够快速适配项目开发节奏，高效完成开发任务，具备良好的工程项目实践素养。</p>
+        </div>
+
+        <!-- 3. 兴趣爱好模块（多维度展示） -->
+        <div class="comm-card">
+            <h2>兴趣爱好 Hobbies</h2>
+            <p id="profile-desc">在代码之外，我喜欢用不同的爱好丰富生活，在动静之间寻找平衡，也从中培养耐心与审美感知。</p>
+            <p>🎹 <strong>音乐</strong>：练习钢琴，偏爱轻音乐与古典乐曲，弹奏时可以沉下心，锻炼对细节、节奏与美感的把控，这份习惯也迁移到界面设计与代码打磨中。</p>
+            <p>🏃 <strong>运动</strong>：健身与户外徒步，保持规律的运动习惯。持续锻炼培养自律与耐力，让我能以更好的状态面对学习与项目压力。</p>
+            <p>📖 <strong>阅读</strong>：闲暇时阅读小说，体会不同故事里的叙事逻辑与人物塑造，拓宽思考视角。</p>
+            <p>📷 <strong>摄影</strong>：喜欢摄影，擅长构图与光影把控，偏爱风光、人文纪实，享受从取景到后期调色的完整创作过程。</p>
+            
+            <!-- 2*2 图片网格容器 -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:20px;">
+                <div style="border-radius:12px; overflow:hidden;">
+                    <img src="images/photo.jpg" alt="摄影作品" style="width:100%; height:300px; object-fit:cover;">
+                    <p style="text-align:center; margin:8px 0 0; font-size:14px; color:#666;">摄影</p>
+                </div>
+                <div style="border-radius:12px; overflow:hidden;">
+                    <img src="images/piano.jpg" alt="钢琴" style="width:100%; height:300px; object-fit:cover;">
+                    <p style="text-align:center; margin:8px 0 0; font-size:14px; color:#666;">钢琴演奏</p>
+                </div>
+                <div style="border-radius:12px; overflow:hidden;">
+                    <img src="images/fitness.jpg" alt="健身" style="width:100%; height:220px; object-fit:cover;">
+                    <p style="text-align:center; margin:8px 0 0; font-size:14px; color:#666;">健身徒步</p>
+                </div>
+                <div style="border-radius:12px; overflow:hidden;">
+                    <img src="images/book.jpg" alt="小说阅读" style="width:100%; height:220px; object-fit:cover;">
+                    <p style="text-align:center; margin:8px 0 0; font-size:14px; color:#666;">小说阅读</p>
+                </div>
+            </div>
+        </div>
+        <!-- 4. 职业发展规划模块（商用专业版） -->
+	<div class="comm-card">
+  	  	<h2>职业发展规划 Career Plan</h2>
+   	 	<p><strong>短期规划（研一 · 夯实基础、拓宽赛道）：</strong>聚焦研究生阶段基础能力搭建，系统学习人工智能与前沿技术体系，广泛涉猎 AI Agent、大模型应用、AI Infra、具身智能等新兴技术方向。全面夯实计算机底层基础、软件工程与前端/移动端开发能力，搭建完整的技术认知框架，探索适配自身优势的研究与就业赛道。同时熟练掌握项目开发、代码规范、版本管理等工程能力，为后续深耕细分方向筑牢基础。</p>
+  	  	<p><strong>中期规划（研二 · 深耕实操、落地实战）：</strong>确定核心深耕方向，针对性开展专业知识进行深度学习，聚焦相关领域细化技术栈。积极参与科研项目与企业实习，落地真实场景开发与技术实操，积累工程项目实战经验。在团队协作中熟悉软件工程开发流程、迭代思维与协作模式，提升问题排查、方案设计与团队协作能力，形成「理论+工程」的双重竞争力。</p>
+    		<p><strong>长期规划（研三 · 求职科研、多维成长）：</strong>兼顾求职就业与学术科研双向发展，一边持续跟进行业前沿技术，巩固核心技术能力、拓展跨界技术视野，积极筹备求职，探索多元化职业发展方向；一边深耕学术研究，完成论文阅读、撰写与成果梳理。最终成长为兼具工程落地能力与创新思维的技术型人才，专注智能交互、AI 应用开发领域，持续深耕高质量技术研发与产品体验优化。</p>
+	</div>
+
+        <!-- 5. 联系方式与页面跳转模块 -->
+	    <div class="comm-card">
+            <h2>联系方式 &amp; 页面导航</h2>
+            <p>电子邮箱：<a href="mailto:2693386955@qq.com" class="nav-link">2693386955@qq.com</a></p>
+            <div class="btn-wrap">
+                <a href="index.html" class="page-card-btn btn-left">
+                    <span>←</span>
+                    <div>返回团队首页</div>
+                </a>
+                <a href="zxxskill.html" class="page-card-btn btn-right">
+                    <div>职业技能详情</div>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 网页底部页脚  -->
+    <div class="footer">
+        <p>© 2026 詹茜茜 |  个人版权所有</p>
+        <p style="margin-top:8px;">基于 HTML/CSS 响应式开发 </p>
+    </div>
+</body>
+</html>
