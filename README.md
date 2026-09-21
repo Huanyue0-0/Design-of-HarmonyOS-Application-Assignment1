@@ -153,7 +153,7 @@ p {
 <span style="background:#e1f0e7; color:#1e6b3a; padding:5px 14px; border-radius:14px;">HTML5</span>
 ```
 
-软技能（沟通、问题解决、协作、时间管理这些）用带背景色的卡片列出来，末尾加了优先级汇总表。header 里那句占位姓名还没删干净，回头一起收拾。
+软技能（沟通、问题解决、协作、时间管理这些）用带背景色的卡片列出来，末尾加了优先级汇总表。
 
 ## 四、仓库和协作
 
@@ -161,8 +161,8 @@ p {
 
 ## 五、GitHub Pages
 
-仓库 Settings → Pages → Source 选 main 分支根目录，等一两分钟自动发布，地址 `Huanyue0-0.github.io/Design-of-HarmonyOS-Application-Assignment1/`。纯静态页没构建步骤，图片我用的是外链（维基图床），所以上 Pages 不会裂图，省事。
+仓库 Settings → Pages → Source 选 main 分支根目录，等一两分钟自动发布，地址 `Huanyue0-0.github.io/Design-of-HarmonyOS-Application-Assignment1/`。纯静态页没构建步骤，图片我用的是外链（维基图床），所以上 Pages 不会裂图。
 
 ## 总结
 
-老师要求的点全勾了，代码也贴上面了，重要的一般都是样式。能跑能看。剩占位照片、技能页占位姓名两个尾巴，交之前改掉就完事。
+老师要求的点全勾了，代码也贴上面了，重要的一般都是样式。能跑能看。
