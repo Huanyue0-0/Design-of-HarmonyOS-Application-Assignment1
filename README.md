@@ -65,7 +65,7 @@ a:hover {
 }
 ```
 
-行内样式用了一堆，比如成员卡片不同的左边框色、页面里那句介绍文字，直接 `style="border-left: 4px solid #2b7a78;"` 怼上去。
+行内样式用了一堆，比如成员卡片不同的左边框色、页面里那句介绍文字，直接 `style="border-left: 4px solid #2b7a78;"` 写上去。
 
 这里踩过一个坑：header 是深蓝底，第一版标题也是深蓝，直接看不见。后来补了 `header h1 { color:#ffd966; }` 改成亮黄才救回来。
 
@@ -129,8 +129,8 @@ p {
 ```html
 <header class="header">
   <img src="data:image/svg+xml,..." alt="本人照片占位">
-  <h1>张还月</h1>
-  <h2>学号：SA26225432</h2>
+  <h1>xxx</h1>
+  <h2>学号：SA26225xxx</h2>
 </header>
 <a class="link" href="mailto:zhanghuanyue@mail.ustc.edu.cn">给我发邮件</a>
 <a class="link" href="index.html">团队页面</a>
